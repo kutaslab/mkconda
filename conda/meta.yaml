@@ -25,7 +25,8 @@ package:
 
 requirements:
   # hard pins for reproducible analyses
-  run:
+  # run:
+  host:
     - mkpy ==0.1.6
     - fitgrid ==0.4.6
     - numpy-base ==1.16.4  # conda wrangling, else switches to conda-forge numpy
@@ -43,23 +44,6 @@ requirements:
     # - numpy  # these should already be satisfied
     # - scipy
     # - pandas
-    # - statsmodels
-
-    # - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
-    # - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
-    # - r-base
-    # - zeromq !=4.2.5  # buggy version in this env
-    # - rpy2 <3.0  # else fitgrid fails on py2ri
-    # - tornado
-    # - jupyter
-    # # - rstudio
-    # - r-irkernel
-    # - bottleneck 
-    # - libiconv  # rpy2 needs it, not included, reasons unknown
-    # - numpy  # these should already be satisfied
-    # - scipy
-    # - pandas 
-    # - matplotlib >=3.0
     # - statsmodels
 
 test:
