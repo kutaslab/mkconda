@@ -26,42 +26,42 @@ package:
 requirements:
   # hard pins for reproducible analyses
   run:
-    # - mkpy ==0.1.6
-    # - fitgrid ==0.4.6
-    # # - blas =1.0  # 1.0-mkl for fitgrid thread setting, else -rstudio +tidyverse promotes
-    # # - numpy-base   # left behind in this environment, reasons unknown
-    # - r-base
-    # - zeromq !=4.2.5  # buggy version in this env
-    # - rpy2 <3.0  # else fitgrid fails on py2ri
-    # - libiconv  # rpy2 needs it, not included, reasons unknown
-    # - matplotlib >=3.0
-    # - tornado
-    # - jupyter
-    # # - rstudio  # chokes conda env resolver, TravisCI times out
-    # # - r-tidyverse
-    # - r-irkernel
-    # - bottleneck
-    # # - numpy  # these should already be satisfied
-    # # - scipy
-    # # - pandas
-    # # - statsmodels
-
-    - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
-    - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
+    - mkpy ==0.1.6
+    - fitgrid ==0.4.6
+    # - blas =1.0  # 1.0-mkl for fitgrid thread setting, else -rstudio +tidyverse promotes
+    # - numpy-base   # left behind in this environment, reasons unknown
     - r-base
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
+    - libiconv  # rpy2 needs it, not included, reasons unknown
+    - matplotlib >=3.0
     - tornado
     - jupyter
-    # - rstudio
+    # - rstudio  # chokes conda env resolver, TravisCI times out
+    # - r-tidyverse
     - r-irkernel
-    - bottleneck 
-    - libiconv  # rpy2 needs it, not included, reasons unknown
-    - numpy  # these should already be satisfied
-    - scipy
-    - pandas 
-    - matplotlib >=3.0
-    - statsmodels
+    - bottleneck
+    # - numpy  # these should already be satisfied
+    # - scipy
+    # - pandas
+    # - statsmodels
+
+    # - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
+    # - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
+    # - r-base
+    # - zeromq !=4.2.5  # buggy version in this env
+    # - rpy2 <3.0  # else fitgrid fails on py2ri
+    # - tornado
+    # - jupyter
+    # # - rstudio
+    # - r-irkernel
+    # - bottleneck 
+    # - libiconv  # rpy2 needs it, not included, reasons unknown
+    # - numpy  # these should already be satisfied
+    # - scipy
+    # - pandas 
+    # - matplotlib >=3.0
+    # - statsmodels
 
 test:
   imports:

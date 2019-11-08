@@ -12,8 +12,9 @@ before_install:
 install:
     - conda install -q conda-build conda-verify
     - conda build conda -c kutaslab -c defaults -c conda-forge
-    - conda create --name mkconda_env mkconda -c local -c kutaslab -c defaults -c conda-forge
-    - conda activate mkconda_env 
+    - conda create --name mkconda_env
+    - conda activate mkconda_env
+    - conda install --name mkconda_env mkconda -c local -c kutaslab -c defaults -c conda-forge
     - conda list
     - lscpu
     - python -c 'import numpy; numpy.show_config()'
