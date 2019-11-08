@@ -28,8 +28,7 @@ requirements:
   run:
     - mkpy ==0.1.6
     - fitgrid ==0.4.6
-    # - blas =1.0  # 1.0-mkl for fitgrid thread setting, else -rstudio +tidyverse promotes
-    # - numpy-base   # left behind in this environment, reasons unknown
+    - numpy-base ==1.16.4  # conda wrangling, else switches to conda-forge numpy
     - r-base
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
