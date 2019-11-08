@@ -11,8 +11,8 @@ before_install:
     - conda info -a
 install:
     - conda install -q conda-build conda-verify
-    - conda build conda -c kutaslab -c defaults -c conda-forge
-    - conda create --name mkconda_env mkconda -c local -c kutaslab  # -c defaults -c conda-forge
+    - conda build conda -c defaults -c kutaslab -c conda-forge
+    - conda create --name mkconda_env mkconda -c local -c defaults -c kutaslab -c conda-forge
     - conda activate mkconda_env 
     - conda list
     - lscpu
