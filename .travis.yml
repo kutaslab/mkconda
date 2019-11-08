@@ -16,7 +16,8 @@ before_install:
     - conda config --add default_channels kutaslab
     - conda info -a
 install:
-    - conda install -q conda # conda-build conda-verify
+    - conda install -q conda-build conda-verify
+    - conda clean --all
     - conda build conda # -c kutaslab -c defaults -c conda-forge
     - conda create --name mkconda_env
     - conda activate mkconda_env
