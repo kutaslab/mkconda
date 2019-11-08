@@ -24,6 +24,7 @@ package:
   version: "0.0.4"
 
 requirements:
+  run:
     - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
     - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
     - r-base
