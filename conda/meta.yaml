@@ -30,17 +30,16 @@ requirements:
     # - python =3.6
     # - numpy 
     # - numpy-base 
-    - r-base
-    - mkpy ==0.1.6
-    - fitgrid ==0.4.6
+    - mkpy >=0.1.6
+    - fitgrid >=0.4.6
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
     - libiconv  # rpy2 needs it, not included, reasons unknown
-    - tornado
+    # - tornado
     - jupyter
     # - rstudio  # chokes conda env resolver, TravisCI times out
     - r-irkernel
-    - r-tidyverse
+    # - r-tidyverse
     - bottleneck
     - matplotlib >=3.0
     # - numpy  # these should already be satisfied
