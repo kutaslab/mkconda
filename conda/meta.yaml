@@ -26,14 +26,10 @@ package:
 requirements:
   # hard pins for reproducible analyses
   # run:
-  host:
-    - numpy  #
-    - numpy-base  # this forces default numpy but triggers a shared lib path warning
-
   run:
     - python =3.6
-    - numpy  ==1.16.4  # for fitgrid
-    - numpy-base  # this forces default numpy but triggers a shared lib path warning
+    - numpy  <=1.16.4  # for fitgrid
+    - numpy-base <=1.16.4
     - r-base
     - mkpy ==0.1.6
     - fitgrid ==0.4.6
