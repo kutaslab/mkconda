@@ -27,20 +27,26 @@ requirements:
   # hard pins for reproducible analyses
   # run:
   host:
+    - numpy  #
+    - numpy-base  # this forces default numpy but triggers a shared lib path warning
+
+  run:
+    - python =3.6
+    - numpy  ==1.16.4  # for fitgrid
+    - numpy-base  # this forces default numpy but triggers a shared lib path warning
+    - r-base
     - mkpy ==0.1.6
     - fitgrid ==0.4.6
-    - numpy-base ==1.16.4  # conda wrangling, else switches to conda-forge numpy
-    - r-base
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
     - libiconv  # rpy2 needs it, not included, reasons unknown
-    - matplotlib >=3.0
     - tornado
     - jupyter
     # - rstudio  # chokes conda env resolver, TravisCI times out
-    # - r-tidyverse
     - r-irkernel
+    - r-tidyverse
     - bottleneck
+    - matplotlib >=3.0
     # - numpy  # these should already be satisfied
     # - scipy
     # - pandas
