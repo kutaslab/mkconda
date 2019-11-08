@@ -11,12 +11,12 @@ before_install:
     # override conda defaults https://github.com/conda/conda/issues/7038
     # priority is last in, goes to the top
     - conda info -a
-    - conda config --prepend channels kutaslab
-    - conda config --append channels conda-forge
-    # - conda config --add default_channels conda-forge
-    # - conda config --add default_channels defaults
-    # - conda config --add default_channels kutaslab
-    # - conda info 
+    # - conda config --prepend channels kutaslab
+    # - conda config --append channels conda-forge
+    - conda config --add default_channels conda-forge
+    - conda config --add default_channels defaults
+    - conda config --add default_channels kutaslab
+    - conda info 
 install:
     - conda install -q conda-build conda-verify
     - conda clean --all

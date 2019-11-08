@@ -27,7 +27,7 @@ requirements:
   # hard pins for reproducible analyses
   # run:
   run:
-    - python =3.6
+    # - python =3.6
     # - numpy 
     # - numpy-base 
     - r-base
