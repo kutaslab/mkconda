@@ -12,7 +12,7 @@ before_install:
     # - conda config --add default_channels conda-forge
     - conda config --add default_channels conda-forge
     - conda config --add default_channels r
-    - conda config --add default_channels main
+    - conda config --add default_channels anaconda/main
     - conda config --add default_channels kutaslab
     - conda info -a
 install:
