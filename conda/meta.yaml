@@ -33,18 +33,18 @@ requirements:
     - r-base
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
+    - libiconv  # rpy2 needs it, not included, reasons unknown
+    - matplotlib >=3.0
     - tornado
     - jupyter
     # - rstudio  # chokes conda env resolver, TravisCI times out
-    - r-tidyverse
+    # - r-tidyverse
     - r-irkernel
     - bottleneck
-    - libiconv  # rpy2 needs it, not included, reasons unknown
-    - numpy  # these should already be satisfied
-    - scipy
-    - pandas
-    - matplotlib >=3.0
-    - statsmodels
+    # - numpy  # these should already be satisfied
+    # - scipy
+    # - pandas
+    # - statsmodels
 
 test:
   imports:
