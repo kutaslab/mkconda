@@ -12,10 +12,8 @@ before_install:
     # priority is last in, goes to the top?
     - conda info -a
     - conda config --add default_channels kutaslab
-    - conda config --add default_channels r
-    - conda config --add default_channels main
-    - conda config --add default_channels anaconda
     - conda config --add default_channels conda-forge
+    - conda config --add default_channels defaults
     - conda info -a
 install:
     - conda install -q conda-build conda-verify
