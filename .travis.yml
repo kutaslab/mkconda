@@ -9,7 +9,8 @@ before_install:
     - hash -r
     - conda config --set always_yes yes --set changeps1 no
     # override conda defaults https://github.com/conda/conda/issues/7038
-    - conda config --add default_channels main
+    - conda config --add default_channels conda-forge
+    # - conda config --add default_channels main
     - conda config --add default_channels r
     - conda config --add default_channels kutaslab
     - conda info -a
