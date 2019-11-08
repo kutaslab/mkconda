@@ -28,8 +28,8 @@ requirements:
   # run:
   run:
     - python =3.6
-    - numpy 
-    - numpy-base 
+    # - numpy 
+    # - numpy-base 
     - r-base
     - mkpy ==0.1.6
     - fitgrid ==0.4.6
