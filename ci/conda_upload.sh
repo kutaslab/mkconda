@@ -30,7 +30,7 @@ fi
 # fi
 
 # peculiar to mkconda b.c. package built locally in /tmp/mkconda ahead of time
-bld_prefix="/tmp/mkconda/"
+bld_prefix="/tmp/mkconda"
 
 # on travis there should be a single linux-64 package tarball. insist
 tarball=`/bin/ls -1 ${bld_prefix}/conda-bld/linux-64/${PACKAGE_NAME}-*-*.tar.bz2`
