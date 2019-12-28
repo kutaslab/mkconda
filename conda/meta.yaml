@@ -25,28 +25,28 @@ package:
 
 requirements:
   run:
-    - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
-    - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
-    - r-base
-    - zeromq !=4.2.5  # buggy version in this env
-    - rpy2 <3.0  # else fitgrid fails on py2ri
-    - tornado
-    - jupyter
+    # - {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
+    # - {{ pin_compatible('fitgrid', lower_bound='0.4.5', upper_bound='0.4.5') }}
+    # - r-base
+    # - zeromq !=4.2.5  # buggy version in this env
+    # - rpy2 <3.0  # else fitgrid fails on py2ri
+    # - tornado
+    # - jupyter
     # - rstudio
-    - r-irkernel
-    - bottleneck 
-    - libiconv  # rpy2 needs it, not included, reasons unknown
+    # - r-irkernel
+    # - bottleneck 
+    # - libiconv  # rpy2 needs it, not included, reasons unknown
     - numpy  # these should already be satisfied
-    - scipy
-    - pandas 
+#    - scipy
+#    - pandas 
     - matplotlib >=3.0
-    - statsmodels
+#    - statsmodels
 
-test:
-  imports:
-    - mkpy
-    - fitgrid
-    - numpy
-    - scipy
-    - statsmodels
-    - matplotlib
+# test:
+#  imports:
+#    - mkpy
+#    - fitgrid
+#    - numpy
+#    - scipy
+#    - matplotlib
+#    - statsmodels
