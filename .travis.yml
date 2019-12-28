@@ -1,7 +1,7 @@
 # mkconda requires a current GIT_TOKEN on TravisCI kutaslab/mkconda
 env:
     - PACKAGE_NAME: mkconda   # for the conda_upload.sh deploy script
-    - CROOT: /tmp/mkconda/conda-bld
+    # - CROOT: /tmp/mkconda/conda-bld
 language: minimal
 before_install:
     - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
@@ -13,7 +13,8 @@ before_install:
 install:
     - conda install -q conda-build conda-verify
     - conda clean --all
-    - cp -r ./conda/conda-bld/* ${CROOT}
+    - mkdir -p /tmp/mkconda/conda-bld
+    - cp -r ./conda/conda-bld/* /tmp/mkconda/conda-bld
     # - conda build conda -c kutaslab -c defaults -c conda-forge
     # - conda create --name mkconda_env mkconda -c local -c kutaslab -c defaults -c conda-forge
     # build env from recipe file snapshot 
