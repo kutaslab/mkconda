@@ -10,10 +10,10 @@
         "matplotlib >=3.0",
         "numpy"
       ],
-      "md5": "c11f106978a5fbbff2d285c15a3a62a0",
+      "md5": "3563c7eb7add22d7bb1f082c6f1a31ac",
       "name": "mkconda",
-      "sha256": "a4d2c060c0cddf9763f7b089124517de4e8b055ef47536fe1966f3c60838a93f",
-      "size": 8796,
+      "sha256": "bec8bcabe1674f61c20d3168fbc58c45c366b693b68de0e8358d6e322549d655",
+      "size": 15272,
       "subdir": "linux-64",
       "timestamp": 1577557546824,
       "version": "0.0.4"
