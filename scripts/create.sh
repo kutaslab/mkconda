@@ -133,7 +133,7 @@ mkdir -p conda/conda-bld/linux-64
 cp -r ${CROOT}/conda-bld/linux-64/*.* conda/conda-bld/linux-64
 
 # snapshot the environment recipe
-conda env export -p ${CROOT}/run_env > conda/env/run_env_recipe.txt
+conda list --explicit > conda/env/run_env_explicit.txt
 
 
 
