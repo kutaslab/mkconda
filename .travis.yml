@@ -21,18 +21,18 @@ install:
     - conda create --name run_env --file ./conda/env/run_env_explicit.txt
     - conda activate run_env
     - conda list
-    #- lscpu
-    # - python -c 'import numpy; numpy.show_config()'
+    - lscpu
+    - python -c 'import numpy; numpy.show_config()'
     # - python -c "import mkpy; print(mkpy.__version__)"
     # - python -c "import fitgrid; print(fitgrid.__version__)"
-# # script:
-# # after_success:
-# before_deploy:
-#     - conda install anaconda-client
-#     - conda list
-# deploy:
-#     - provider: script
-#       skip_cleanup: true
-#       script: bash ./ci/conda_upload.sh
-#       on:
-#         all_branches: true
+# script:
+# after_success:
+before_deploy:
+    - conda install anaconda-client
+    - conda list
+deploy:
+    - provider: script
+      skip_cleanup: true
+      script: bash ./ci/conda_upload.sh
+      on:
+          all_branches: true
