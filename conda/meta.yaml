@@ -33,10 +33,10 @@ requirements:
     - r-base
     - zeromq !=4.2.5  # buggy version in this env
     - rpy2 <3.0  # else fitgrid fails on py2ri
-    # - tornado
-    # - jupyter
-    # - rstudio
-    # - r-irkernel
+    - tornado
+    - jupyter
+    - rstudio
+    - r-irkernel
     - bottleneck 
     - libiconv  # rpy2 needs it, not included, reasons unknown
     - numpy  # these should already be satisfied by mkpy and fitgrid
