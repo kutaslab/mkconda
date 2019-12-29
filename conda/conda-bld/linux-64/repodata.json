@@ -7,15 +7,25 @@
       "build": "0",
       "build_number": 0,
       "depends": [
+        "bottleneck",
+        "fitgrid 0.4.8.*",
+        "libiconv",
         "matplotlib >=3.0",
-        "numpy"
+        "mkpy 0.1.6.*",
+        "numpy",
+        "pandas",
+        "r-base",
+        "rpy2 <3.0",
+        "scipy",
+        "statsmodels",
+        "zeromq !=4.2.5"
       ],
-      "md5": "63cd348f42acaf2d44875552e2fcce3a",
+      "md5": "a472dbfc1b7cad122bc6bbf6cec73ba6",
       "name": "mkconda",
-      "sha256": "91915e1b22d4664ca9261b00a6d7edd6d53e766bb5576cabc1a7aee237cd1842",
-      "size": 22111,
+      "sha256": "f142e658899a4219645a90d8ce6d215c8a0112c70e676ab4a35846495cc51040",
+      "size": 60524,
       "subdir": "linux-64",
-      "timestamp": 1577557546824,
+      "timestamp": 1577579448365,
       "version": "0.0.4"
     }
   },

@@ -91,14 +91,17 @@ echo "mkconda build_env OK"
 #    what times out on TravisCI
 # ------------------------------------------------------------
 conda build --croot ${CROOT}/conda-bld purge
+rm  ${CROOT}/conda-bld/linux-64/*
+rm -r ${CROOT}/conda-bld/linux-64/.cache
 
 echo "building $(conda build conda --output --croot ${CROOT}/conda-bld) from meta.yaml ... this takes a long while"
-if [[ $(conda build conda --croot ${CROOT}/conda-bld -c kutaslab -c defaults -c conda-forge) ]]; then
-    echo "OK"
-else
-    echo "failed"
-    exit -4
-fi
+conda build conda --croot ${CROOT}/conda-bld -c kutaslab -c defaults -c conda-forge
+# if [[ $(conda build conda --croot ${CROOT}/conda-bld -c kutaslab -c defaults -c conda-forge) ]]; then
+#     echo "OK"
+# else
+#     echo "failed"
+#     exit -4
+# fi
 
 # ------------------------------------------------------------
 # 3. create and activate a test_env environment with the binary
@@ -106,12 +109,13 @@ fi
 # ------------------------------------------------------------
 echo "creating run_env with mkconda-${ver} package installed"
 local_channel=file://${CROOT}/conda-bld
-if [[ $(conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y) ]]; then
-    echo "OK"
-else
-    echo "failed"
-    exit -5
-fi
+conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y
+# if [[ $(conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y) ]]; then
+#     echo "OK"
+# else
+#     echo "failed"
+#     exit -5
+# fi
 
 conda deactivate
 conda activate ${CROOT}/run_env
