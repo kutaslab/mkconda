@@ -111,7 +111,7 @@ echo "creating run_env with mkconda-${ver} package installed"
 local_channel=file://${CROOT}/conda-bld
 # this works
 # conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y
-conda create -p ${CROOT}/run_env mkconda=${ver} -c defaults -c kutaslab -c ${local_channel} -c conda-forge -y
+conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c defaults -c kutaslab -c conda-forge -y
 
 # if [[ $(conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y) ]]; then
 #     echo "OK"

@@ -1,4 +1,4 @@
-# mkconda 0.0.4 Tue Dec 31 07:43:23 PST 2019
+# mkconda 0.0.4 Tue Dec 31 08:32:56 PST 2019
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
