@@ -136,7 +136,7 @@ else
 fi
 
 # snapshot the environment recipe
-echo "# mkconda ${ver} $(date)" > conda/mconda_env_recipe.txt
+echo "# mkconda ${ver} $(date)" > conda/mkconda_env_recipe.txt
 conda list --explicit >> conda/mkconda_env_recipe.txt
 
 # copy pkg binary files over to local dir
