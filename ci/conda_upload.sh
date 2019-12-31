@@ -92,7 +92,10 @@ echo "$(ls ./**/${PACKAGE_NAME}*.tar.bz2)"
 #    attempt the upload 
 # else
 #    skip the upload and exit happy
-if [[ $ANACONDA_TOKEN != "[not_set]" && $is_release = "true" ]]; then
+#if [[ $ANACONDA_TOKEN != "[not_set]" && $is_release = "true" ]]; then
+
+# this is only for testing
+if [[ $ANACONDA_TOKEN != "[not_set]" ]]; then
 
     echo "uploading to Anconda Cloud: $PACKAGE_NAME$ $version ..."
     if ${conda_cmd}; then
