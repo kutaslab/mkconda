@@ -1,11 +1,11 @@
-# mkconda 0.0.4 Tue Dec 31 08:32:56 PST 2019
+# mkconda 0.0.4 Tue Dec 31 10:49:03 PST 2019
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: linux-64
 @EXPLICIT
 https://repo.anaconda.com/pkgs/main/linux-64/_libgcc_mutex-0.1-main.conda
-https://repo.anaconda.com/pkgs/r/linux-64/_r-mutex-1.0.0-anacondar_1.conda
-https://repo.anaconda.com/pkgs/main/linux-64/blas-1.0-mkl.conda
+https://repo.anaconda.com/pkgs/r/linux-64/_r-mutex-1.0.0-anacondar_1.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/blas-1.0-mkl.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2019.11.27-0.conda
 https://repo.anaconda.com/pkgs/main/linux-64/intel-openmp-2019.4-243.conda
 https://repo.anaconda.com/pkgs/main/linux-64/ld_impl_linux-64-2.33.1-h53a641e_7.conda
@@ -271,7 +271,7 @@ https://repo.anaconda.com/pkgs/r/linux-64/r-lava-1.6.2-r351h6115d3f_0.tar.bz2
 https://repo.anaconda.com/pkgs/r/linux-64/r-lme4-1.1_17-r351h29659fb_0.tar.bz2
 https://repo.anaconda.com/pkgs/r/linux-64/r-processx-3.1.0-r351h29659fb_0.tar.bz2
 https://repo.anaconda.com/pkgs/r/linux-64/r-rbokeh-0.6.3-r351_0.tar.bz2
-https://repo.anaconda.com/pkgs/r/linux-64/r-recommended-3.5.1-r351_0.tar.bz2
+https://repo.anaconda.com/pkgs/r/linux-64/r-recommended-3.5.1-r351_0.conda
 https://repo.anaconda.com/pkgs/r/linux-64/r-rsqlite-2.1.1-r351h29659fb_0.tar.bz2
 https://repo.anaconda.com/pkgs/r/linux-64/r-rvest-0.3.2-r351h6115d3f_0.tar.bz2
 https://repo.anaconda.com/pkgs/r/linux-64/r-tibble-1.4.2-r351h96ca727_0.tar.bz2

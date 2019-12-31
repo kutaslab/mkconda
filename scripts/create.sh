@@ -87,12 +87,13 @@ conda info
 echo "mkconda build_env OK"
 
 # ------------------------------------------------------------
-# 2. Build the binary mkconda package tarbal ... slow this is
+# 2. Build the binary mkconda package tarball ... slow this is
 #    what times out on TravisCI
 # ------------------------------------------------------------
 conda build --croot ${CROOT}/conda-bld purge
 rm  ${CROOT}/conda-bld/linux-64/*tar.bz2
 rm -r ${CROOT}/conda-bld/linux-64/.cache
+
 
 echo "building $(conda build conda --output --croot ${CROOT}/conda-bld) from meta.yaml ... this takes a long while"
 conda build conda --croot ${CROOT}/conda-bld -c kutaslab -c defaults -c conda-forge
@@ -139,9 +140,11 @@ fi
 echo "# mkconda ${ver} $(date)" > conda/mkconda_env_recipe.txt
 conda list --explicit >> conda/mkconda_env_recipe.txt
 
-# copy pkg binary files over to local dir
+# copy pkg binary files over to local dir and update the repo
+git rm -f --ignore-unmatch conda/conda-bld/linux-64/mkconda*.tar.bz2  # purge previous
 mkdir -p conda/conda-bld/linux-64
 cp -r ${CROOT}/conda-bld/linux-64/*.* conda/conda-bld/linux-64
+git add conda/conda-bld/linux-64/mkconda*.tar.bz2  # replace with new
 
 
 
