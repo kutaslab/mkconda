@@ -1,0 +1,38 @@
+{
+  "info": {
+    "subdir": "linux-64"
+  },
+  "packages": {
+    "mkconda-0.0.4.dev1-h39e3cac_0.tar.bz2": {
+      "build": "h39e3cac_0",
+      "build_number": 0,
+      "depends": [
+        "bottleneck",
+        "fitgrid 0.4.8.*",
+        "jupyter",
+        "libiconv",
+        "matplotlib >=3.0",
+        "mkpy 0.1.6.*",
+        "numpy 1.16.4.*",
+        "numpy-base 1.16.4.*",
+        "r-base",
+        "r-irkernel",
+        "r-tidyverse",
+        "rpy2 <3.0",
+        "rstudio",
+        "tornado",
+        "zeromq !=4.2.5"
+      ],
+      "md5": "f2fd243110e55df54cae9f756b157f8e",
+      "name": "mkconda",
+      "sha256": "f9d1e15ecdb5104b06ff9914c0f305199218310b5337462a347d06efd081ce6a",
+      "size": 6481,
+      "subdir": "linux-64",
+      "timestamp": 1577774204467,
+      "version": "0.0.4.dev1"
+    }
+  },
+  "packages.conda": {},
+  "removed": [],
+  "repodata_version": 1
+}

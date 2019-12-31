@@ -91,7 +91,7 @@ echo "mkconda build_env OK"
 #    what times out on TravisCI
 # ------------------------------------------------------------
 conda build --croot ${CROOT}/conda-bld purge
-rm  ${CROOT}/conda-bld/linux-64/*
+rm  ${CROOT}/conda-bld/linux-64/*tar.bz2
 rm -r ${CROOT}/conda-bld/linux-64/.cache
 
 echo "building $(conda build conda --output --croot ${CROOT}/conda-bld) from meta.yaml ... this takes a long while"
@@ -109,7 +109,10 @@ conda build conda --croot ${CROOT}/conda-bld -c kutaslab -c defaults -c conda-fo
 # ------------------------------------------------------------
 echo "creating run_env with mkconda-${ver} package installed"
 local_channel=file://${CROOT}/conda-bld
-conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y
+# this works
+# conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y
+conda create -p ${CROOT}/run_env mkconda=${ver} -c defaults -c kutaslab -c ${local_channel} -c conda-forge -y
+
 # if [[ $(conda create -p ${CROOT}/run_env mkconda=${ver} -c ${local_channel} -c kutaslab -c defaults -c conda-forge -y) ]]; then
 #     echo "OK"
 # else
@@ -132,12 +135,13 @@ else
     exit -6
 fi
 
+# snapshot the environment recipe
+conda list --explicit > conda/mkconda-${ver}_env_recipe.txt
+
 # copy pkg binary files over to local dir
 mkdir -p conda/conda-bld/linux-64
 cp -r ${CROOT}/conda-bld/linux-64/*.* conda/conda-bld/linux-64
 
-# snapshot the environment recipe
-conda list --explicit > conda/env/run_env_explicit.txt
 
 
 

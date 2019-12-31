@@ -18,34 +18,42 @@
 #        conda activate my_env_name
 #        conda install mkconda -c kutaslab -c defaults -c conda-forge 
 #
-
+{% set numpy_pin = "1.16.4" %}  # same as fitgrid
 {% set mkpy_pin = "0.1.6" %}
 {% set fitgrid_pin = "0.4.8" %}
 
 package:
   name: mkconda
-  version: "0.0.4"
+  version: "0.0.4.dev1"
 
 requirements:
+  # build:
+  host:
+    - python =3.6
+    - mkl  # should be in anaconda by default nowadays
+    - blas=1.0  # important, pulls from anaconda w/ MKL, blocks conda-forge openblas
+  # host:
   run:
-    - mkpy ={{ mkpy_pin }}  # {{ pin_compatible('mkpy', lower_bound='0.1.6', upper_bound='0.1.6' )}}
-    - fitgrid ={{ fitgrid_pin }} # {{ pin_compatible('fitgrid', lower_bound='0.4.8', upper_bound='0.4.8') }}
-    - mkl  # mkgpu1 specific
-    - blas   
+    - mkpy ={{ mkpy_pin }}
+    - fitgrid ={{ fitgrid_pin }}
+    - spudtr
+    - numpy ={{ numpy_pin }}
+    - numpy-base ={{ numpy_pin }}
     - zeromq !=4.2.5  # buggy version in this env
+    - r-base  # not mro
     - rpy2 <3.0  # else fitgrid fails on py2ri
     - matplotlib >=3.0
-    - r-base
-    - statsmodels
     - tornado
     - jupyter
-    - rstudio
     - r-irkernel
     - bottleneck 
-    - libiconv  # rpy2 needs it, not included, reasons unknown
-    - numpy  # these should already be satisfied by mkpy and fitgrid
-    - scipy
-    - pandas 
+    - libiconv  # rpy2 needs it, not included this env, reason unknown
+    - r-tidyverse
+    - rstudio
+#    - statsmodels
+#    - numpy  # these should already be satisfied by mkpy and fitgrid
+#    - scipy
+#    - pandas 
 
 test:
   imports:
