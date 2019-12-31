@@ -136,7 +136,8 @@ else
 fi
 
 # snapshot the environment recipe
-conda list --explicit > conda/mkconda-${ver}_env_recipe.txt
+echo "# mkconda ${ver} $(date)" > conda/mconda_env_recipe.txt
+conda list --explicit >> conda/mkconda_env_recipe.txt
 
 # copy pkg binary files over to local dir
 mkdir -p conda/conda-bld/linux-64

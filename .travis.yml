@@ -18,7 +18,7 @@ install:
     # - conda build conda -c kutaslab -c defaults -c conda-forge
     # - conda create --name mkconda_env mkconda -c local -c kutaslab -c defaults -c conda-forge
     # build env from recipe file snapshot 
-    - conda create --name run_env --file ./conda/env/run_env_explicit.txt
+    - conda create --name run_env --file ./conda/env/mkconda_env_recipe.txt
     - conda activate run_env
     - conda list
     - lscpu
