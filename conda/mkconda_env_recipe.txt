@@ -322,6 +322,7 @@ https://repo.anaconda.com/pkgs/main/linux-64/patsy-0.5.1-py36_0.conda
 https://repo.anaconda.com/pkgs/main/linux-64/pyarrow-0.11.1-py36he6710b0_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/pytables-3.6.1-py36h71ec239_0.conda
 https://conda.anaconda.org/kutaslab/linux-64/mkpy-0.1.6-0_g0d5cce5.tar.bz2
+https://conda.anaconda.org/kutaslab/linux-64/spudtr-0.0.1-0_g41d0a30_0.tar.bz2
 https://repo.anaconda.com/pkgs/main/linux-64/statsmodels-0.10.1-py36hdd07704_0.conda
 https://repo.anaconda.com/pkgs/main/noarch/seaborn-0.9.0-pyh91ea838_1.tar.bz2
 https://conda.anaconda.org/kutaslab/linux-64/pymer4-0.6.0-py36_0.tar.bz2
