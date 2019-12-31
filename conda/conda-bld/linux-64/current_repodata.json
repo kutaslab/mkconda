@@ -3,7 +3,7 @@
     "subdir": "linux-64"
   },
   "packages": {
-    "mkconda-0.0.4.dev1-h39e3cac_0.tar.bz2": {
+    "mkconda-0.0.4-h39e3cac_0.tar.bz2": {
       "build": "h39e3cac_0",
       "build_number": 0,
       "depends": [
@@ -24,13 +24,13 @@
         "tornado",
         "zeromq !=4.2.5"
       ],
-      "md5": "311dbd0810f91b06d7b542ae6b2547cf",
+      "md5": "57dfc202e2130a4930295251df3814ff",
       "name": "mkconda",
-      "sha256": "671c460e5da5acc87d035f044554d084c7b651408d7ecb6c7bd7c1ad0c976f6f",
-      "size": 16393,
+      "sha256": "0be0c9c096b6bb6897262eaf2ef448004d372403b680328bac5fe6ee4f632671",
+      "size": 26819,
       "subdir": "linux-64",
-      "timestamp": 1577775484954,
-      "version": "0.0.4.dev1"
+      "timestamp": 1577806503235,
+      "version": "0.0.4"
     }
   },
   "packages.conda": {},
