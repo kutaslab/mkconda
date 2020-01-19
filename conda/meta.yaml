@@ -19,12 +19,13 @@
 #        conda install mkconda -c kutaslab -c defaults -c conda-forge 
 #
 {% set numpy_pin = "1.16.4" %}  # same as fitgrid
-{% set mkpy_pin = "0.1.7" %}
+{% set mkpy_pin = "0.1.9" %}  # min version to exclude tests from package
+{% set spudtr_pin = "0.0.4" %}  # ""   ""
 {% set fitgrid_pin = "0.4.9" %}
 
 package:
   name: mkconda
-  version: "0.0.6"
+  version: "0.0.7"
 
 requirements:
   host:
@@ -34,7 +35,7 @@ requirements:
   run:
     - mkpy >={{ mkpy_pin }}
     - fitgrid >={{ fitgrid_pin }}
-    - spudtr
+    - spudtr >={{ spudtr_pin }}
     - numpy ={{ numpy_pin }}
     - numpy-base ={{ numpy_pin }}
     - zeromq !=4.2.5  # buggy version in this env

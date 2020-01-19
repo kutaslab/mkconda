@@ -3,7 +3,7 @@
     "subdir": "linux-64"
   },
   "packages": {
-    "mkconda-0.0.6-h39e3cac_0.tar.bz2": {
+    "mkconda-0.0.7-h39e3cac_0.tar.bz2": {
       "build": "h39e3cac_0",
       "build_number": 0,
       "depends": [
@@ -12,7 +12,7 @@
         "jupyter",
         "libiconv",
         "matplotlib >=3.0",
-        "mkpy >=0.1.7",
+        "mkpy >=0.1.9",
         "numpy 1.16.4.*",
         "numpy-base 1.16.4.*",
         "r-base",
@@ -24,13 +24,13 @@
         "tornado",
         "zeromq !=4.2.5"
       ],
-      "md5": "1e4a94c6b11046bef354ab667e292da7",
+      "md5": "674030613a6ca7e579c7a1813d9be929",
       "name": "mkconda",
-      "sha256": "e44db08791d269485d5b5a953b89ff3d638b1db8f8c8ea0f0cbf85467baec0eb",
-      "size": 29653,
+      "sha256": "9ad5bcceb40fb04bcb51c04f68abd6efdfc4a7b981354b96c3b563618f5509f1",
+      "size": 51785,
       "subdir": "linux-64",
-      "timestamp": 1579227144654,
-      "version": "0.0.6"
+      "timestamp": 1579408394646,
+      "version": "0.0.7"
     }
   },
   "packages.conda": {},
