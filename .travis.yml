@@ -27,6 +27,17 @@ install:
     - python -c 'import mkpy; print(mkpy.__version__)'
     - python -c 'import fitgrid; print(fitgrid.__version__)'
 after_success:
+    - mkdir pkgs; cd pkgs
+    - git clone https://github.com/kutaslab/mkpy mkpy
+    - cd mkpy; pytest; cd ..
+
+    - git clone https://github.com/kutaslab/spudtr sputdr
+    - cd spudtr; pytest; cd ..
+
+    - git clone https://github.com/kutaslab/fitgrid fitgrid
+    - cd fitgridy; pytest; cd ..
+
+    - cd ..
     - conda deactivate   # fall back to build env
 before_deploy:
     - conda install anaconda-client
