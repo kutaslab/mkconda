@@ -15,7 +15,7 @@ requirements:
     - jupyterlab
     - numba
     - spyder
-    - pyodb
+    - odfpy
     - ipywidgets
     # pending mamba/boa install fix
     # - rapids
