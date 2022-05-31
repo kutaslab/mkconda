@@ -1,6 +1,6 @@
 package:
   name: mkconda
-  version: "0.1.1"
+  version: "0.1.2"
 
 build:
   noarch: python
@@ -15,12 +15,16 @@ requirements:
     - jupyterlab
     - numba
     - spyder
+    - odfpy
+    - ipywidgets
+    - rpy2 <3.5  # 3.5.1 breaks pymer4 05/30/22
     # pending mamba/boa install fix
     # - rapids
     # - cudatoolkit-dev
     - pytorch
     - r-tidyverse
     - r-irkernel
+    - r-ez
     - firefox
 
 test:
