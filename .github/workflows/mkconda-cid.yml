@@ -46,8 +46,8 @@ on:
     types: [published]
 
   schedule:
-    # min hour day of month, day of week = when, / = step by, * = all
-    # weekly on Sunday
+    # min hour day month year. digit = when, / = step by, * = all
+    # Sunday midnight
     - cron: '0 0 * * 0'
 
 env:
