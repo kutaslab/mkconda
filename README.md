@@ -9,12 +9,14 @@ CPUS and NVIDIA GPUS, among them:
 * jupyterlab - Jupyter notebook desktop + Python and R kernels
 * spyder - Python IDE
 * tidyverse - data wrangling utilities in R
-# DROPPED PENDING FIX OF cudatoolkit-dev 11.4 MAMBA INSTALL
-* ~~cudatoolkit-dev~~
-* ~~rapids - NVIDIA Python GPU accelerators~~
 * pytorch - tensor library for deep learning
 * numba - CPU and GPU Python acclerators
 * Intel Math Kernel (MKL) library - math libraries optimized for Intel CPUs
+
+**DROPPED PENDING FIX OF cudatoolkit-dev 11.4 MAMBA INSTALL**
+
+* ~~cudatoolkit-dev~~
+* ~~rapids - NVIDIA Python GPU accelerators~~
 
 
 ## Installation
@@ -45,7 +47,7 @@ environment like so:
 
 ```
 (mkconda_072221) $ conda list
-(mkconda_072221) $ mamba install -c conda-forge -c defaults package_a package_b ...
+(mkconda_072221) $ mamba install --strict-channel-priority -c conda-forge -c defaults package_a package_b ...
 
 ```
 
@@ -57,7 +59,7 @@ code to reside, and install the development branch from source into
 the working environment in editable ("development") mode like so:
 
 ```
-(base) $ mamba create --name mkconda_072221 -c conda-forge -c defaults -c ejolly -c kutaslab
+(base) $ mamba create --name mkconda_072221 --strict-channel-priority -c conda-forge -c defaults -c ejolly -c kutaslab
 (base) $ conda activate mkconda_072221
 (mkconda_072221) $ cd path/to/local_source_dirs
 (mkconda_072221) $ git clone https://github.com/the_package --single-branch -b the_branch
