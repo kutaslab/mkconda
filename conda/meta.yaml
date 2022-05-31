@@ -17,6 +17,7 @@ requirements:
     - spyder
     - odfpy
     - ipywidgets
+    - rpy2 <3.5  # 3.5.1 breaks pymer4 05/30/22
     # pending mamba/boa install fix
     # - rapids
     # - cudatoolkit-dev
